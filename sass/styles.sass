@@ -1,0 +1,217 @@
+$text-darker: #393E51
+$text-lighter: #5F6371 
+$prima-blue: #3D518C
+$prima-gold: #BDAA8A
+$hover-blue: #334681
+$hover-light: #F8F5F0
+$hover-lighter: #FDFAF6
+.offcanvas
+    --bs-offcanvas-width: 280px
+:root 
+    --bs-body-font-family: "Raleway", sans-serif
+$offcanvas-horizontal-width:200px
+.text-center
+    text-align: center
+ul
+    padding-inline-start: 0
+.h5
+    font-size: 16px
+.h6
+    font-size: 14px
+.color-lighter
+    color: $text-lighter
+.wrapper
+    background: white
+    min-height: 100vh
+.nw
+    white-space: nowrap
+
+li
+    list-style-type: none
+a
+    color: $text-darker
+    text-decoration: none
+button
+    border: none
+    background: inherit
+header
+    background: white
+    position: sticky
+    top: 0
+    
+.header
+    padding-top: 10px
+    padding-bottom: 10px
+    margin-left: auto
+    margin-right: auto
+    max-width: 1240px
+
+.flex-jccen
+    display: flex
+    justify-content: center
+.flex-sb
+    display: flex
+    justify-content: space-between
+.flex-col
+    display: flex
+    flex-direction: column
+.flex-aic
+    display: flex
+    align-items: center
+.flex-jcend
+    justify-content: flex-end
+//.container  
+
+    
+.contact
+    gap: 5px
+    height: 24px
+        
+    &__phone
+        margin: 0 8px
+
+    &__time
+        color: $prima-gold
+        margin: 0
+    img
+        color: $text-darker
+        margin: 0 8px
+.con
+    display: flex 
+    
+.menu-top
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+
+    gap: 20px
+
+    // &__li
+    //     // подобрать адаптивные 
+    //     margin-right: 50px 
+    //     &:last-child
+    //       margin-right: 0px  
+
+.header-bot
+    display: flex
+    justify-content: space-between
+    &__left
+        display: flex
+        flex-direction: row
+        gap:10px
+    &__btn
+        width: 175px
+        height: 46px
+        border-radius: 10px
+        border: none
+        background: $prima-blue
+        color: $hover-light
+        display: flex
+        align-items: center
+        
+    &__fish
+        margin: 10px 8px 12px 25px
+.search
+    width: 400px
+    color: $prima-gold
+    border-radius: 10px
+    border-top-color: $prima-gold
+    border: 1px solid $prima-gold
+    display: flex
+    align-items: center
+    input
+        font-size: 22px
+        height: 100%
+        border: none
+        background: inherit
+        color: $prima-gold
+        width: 90%
+        :active :hover :focus
+            outline: 0
+            outline-offset: 0
+        &::placeholder
+            color: $prima-gold
+    img
+        color: $prima-gold
+        height: 24px
+.basket-like
+    display: flex
+    align-items: center
+    button
+        margin-right: 24px
+        &:last-child
+            margin-right: 0
+
+.mob-top-menu
+    height: calc( 100% - 16px )
+    padding-left: 20px
+    
+
+.mob-bot
+    width: 240px
+    justify-content: center
+    padding-bottom: 10px
+    gap: 10px
+.mob-text
+    font-size: 14px
+.icons
+    img
+        margin-right: 10px
+.btn-phone
+    width: 240px
+    color: white
+    border-radius: 10px
+
+// --------------- main ----------------
+.main
+    display: flex
+    justify-content: center
+    margin-left: auto
+    margin-right: auto
+    width: 100%
+    min-height: 100vh
+    background: white
+
+// --------------- footer ----------------   
+.footer
+    padding-top: 10px
+    height-min: 211px
+    background: $prima-blue
+    color: white
+    &__col
+        img
+            width: 150px
+            height: 66px
+        .title
+
+.left-m
+    width: 100px
+
+
+// --------------- adaptive ----------------   
+
+.hide-on-desktop
+    display: none
+.btn-phone
+    background: $prima-gold
+
+@media (max-width: 1023px)
+    .hide-on-desktop
+        display: block
+    .hide-on-mobile
+        display: none
+    // .main
+    .logo
+        height: 24px
+    .container
+        max-width: 1000px
+    .mob-menu
+        display: block
+    .search
+        width: 200px
+
+@media (max-width: 992px)
+    .footer__col
+        align-items: center
+        padding-right: 0
+        padding-top: 20px
