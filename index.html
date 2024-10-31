@@ -21,8 +21,11 @@
 <body>
     <div class="wrapper">
         <header>
+            <!-- Лишний тег. class="header" можно вынести в тег header -->
             <div class="header">
             <!-- <div class="head-con"> -->
+                <!-- Лишние классы hide-on-mobile и flex-sb. Соответствующие классы уже заданы
+                 в Bootstrap -->
                 <div class="container hide-on-mobile flex-sb">
                     <div class="contact flex-sb">
                         <div class="contact__location con">
@@ -31,10 +34,14 @@
                         </div>
                         <div class="contact__phone con">
                             <img src="assets/icons/Phone.svg" alt="Phone">
+                            <!-- Должен быть ссылкой с href="tel:номер_телефона" -->
                             <p class="nw">+7 (922) 181 36 75</p>
                         </div>
                         <div class="contact__time con"><p class="nw">(10:00–23:00)</p></div>
                     </div>
+                    <!-- Лишний container. Центровка контента производится средствами Bootstrap с боковыми padding, 
+                     чтобы контент не "прилипал" к краям экрана. Вложенный в него дополнительный container добавляет общий
+                     внутренний отступ. -->
                     <nav class="container nav-top ">
                         <ul class="container__menu menu-top">
                             <li class="menu-top__li"><a href="#">Оплата и доставка</a></li>
@@ -46,14 +53,19 @@
                 </div>
                 <div class="container header-bot">
                     <div class="header-bot__left">
+                        <!-- лишний класс hide-on-desktop. Соответствующие класс есть в Bootstrap -->
                         <button class="hide-on-desktop" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><img src="assets/icons/menu-line-horizontal.svg" alt="menu">
                         </button>
+                        <!-- Логотип должен быть обертнут в тег a с ссылкой на главную страницу.
+                         Одиночные теги img, input, hr, br и другие принято прописывать в стандарте XML: перед ">" ставить "/".
+                         Пример: <img src="..." alt="..." /> -->
                         <img src="assets/icons/Gurman-logo.svg" alt="Gurman" class="logo">
                         <button class="header-bot__btn hide-on-mobile">
                             <img src="assets/icons/katakog-fish.svg" alt="" class="header-bot__fish">Каталог
                         </button>
                         <div class="search hide-on-mobile">
                             <input type="search" placeholder="Найти товар">
+                            <!-- иконку лучше вывести в фон кнопки, либо использовать svg -->
                             <button><img src="assets/icons/search-01.svg" alt=""></button>
                         </div>
                     </div>
@@ -65,6 +77,7 @@
                     </div>
                 </div>
                 
+                <!-- Выдвигающаяся панель не нужна шапки, так же и для SEO. Лучше вынести в самый низ перед подключением скриптов -->
                 <div class="offcanvas offcanvas-start left-m" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                     <div class="offcanvas-header">
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
@@ -72,6 +85,7 @@
                     <div class="mob-top-menu flex-col flex-sb">
                         <ul class="menu-left">
                             <li>
+                                <!-- Коллапс не доделан. Вместо a, лучше использовать button, т.к. этот элемент никуда не ссылает -->
                                 <a class="" data-bs-toggle="collapse" href="#katalog" role="button" aria-expanded="false" aria-controls="collapseExample">Каталог
                                 </a>
                                     <div class="collapse" id="katalog">
@@ -95,9 +109,11 @@
                         <div class="mob-bot flex-col">
                             <span class="mob-text">г. Екатеринбург <br> Ежедневно с 10:00 до 21:00</span>
                             <div class="icons">
+                                <!-- Должны быть ссылки с атрибутом target="_blank" -->
                                 <img src="assets/icons/telegram.svg" alt="">
                                 <img src="assets/icons/vk.svg" alt="">
                             </div>
+                            <!-- Должен быть ссылкой с href="tel:номер_телефона" -->
                             <button class="btn-phone">
                                 +7 (922) 181 36 75
                             </button>
@@ -117,9 +133,11 @@
             <div class="container ">
                 <div class="row ">
                     <div class="footer__col flex-col col-12 col-lg-3">
+                        <!-- аналогично с логотипом в шапке -->
                         <img src="assets/icons/Footer-logo.svg" alt="Gurman" class="logo">
                         <span>Paspaботано в LOBUT DIGITAL</span>
                     </div>
+                    <!-- Нарушение семантики. Должен быть список ul/ol -->
                     <div class="footer__col flex-col col-12 col-lg-2 h6">
                         <span class="title h5">Каталог</span>
                         <span>Охлажденная рыба</span>
@@ -144,6 +162,7 @@
                     <div class="footer__col flex-col col-12 col-lg-3 h6">
                             <span class="title h5">Контакты</span>
                             <span>г. Екатеринбург ул. Шефская д. 101</span>
+                            <!-- Должен быть ссылкой с href="tel:номер_телефона" -->
                             <span>+7 (922) 181 36 75</span>
                             <span>+7 (922) 201 95 20</span>
                     </div>
