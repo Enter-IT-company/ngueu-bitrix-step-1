@@ -98,6 +98,9 @@ ul {
     padding-inline-start: 0;
     margin: 0;
 }
+li {
+    padding: 0;
+}
 
 
 .wrapper {
@@ -296,7 +299,7 @@ button {
             padding: 0;
             margin-bottom: 20px;
         }
-        &__ol {
+        &__li {
             padding: 0;
             margin-bottom: 8px;
             &:last-child {
@@ -381,7 +384,7 @@ button {
             &__title {
                 margin-bottom: 16px;
             }
-            &__ol {
+            &__li {
                 margin-bottom: 4px;
             }
         }

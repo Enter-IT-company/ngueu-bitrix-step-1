@@ -89,6 +89,10 @@ ul {
   margin: 0;
 }
 
+li {
+  padding: 0;
+}
+
 .wrapper {
   background: white;
   min-height: 100vh;
@@ -266,11 +270,11 @@ button {
   padding: 0;
   margin-bottom: 20px;
 }
-.footer__col__ol {
+.footer__col__li {
   padding: 0;
   margin-bottom: 8px;
 }
-.footer__col__ol:last-child {
+.footer__col__li:last-child {
   margin-bottom: 0;
 }
 .footer__col img {
@@ -346,7 +350,7 @@ button {
   .footer__col__title {
     margin-bottom: 16px;
   }
-  .footer__col__ol {
+  .footer__col__li {
     margin-bottom: 4px;
   }
   .footer img {
