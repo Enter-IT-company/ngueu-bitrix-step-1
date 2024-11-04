@@ -20,155 +20,163 @@
 </head>
 <body>
     <div class="wrapper">
-        <header>
-            <!-- Лишний тег. class="header" можно вынести в тег header -->
-            <div class="header">
-            <!-- <div class="head-con"> -->
-                <!-- Лишние классы hide-on-mobile и flex-sb. Соответствующие классы уже заданы
-                 в Bootstrap -->
-                <div class="container hide-on-mobile flex-sb">
-                    <div class="contact flex-sb">
-                        <div class="contact__location con">
-                            <img src="assets/icons/location-01.svg" alt="loc">
-                            <span class="nw">г. Екатеринбург</span>
-                        </div>
-                        <div class="contact__phone con">
-                            <img src="assets/icons/Phone.svg" alt="Phone">
-                            <!-- Должен быть ссылкой с href="tel:номер_телефона" -->
-                            <p class="nw">+7 (922) 181 36 75</p>
-                        </div>
-                        <div class="contact__time con"><p class="nw">(10:00–23:00)</p></div>
+
+<!------------ header --------------->
+
+        <header class="header h6 container-lg ">
+            <div class="header__top d-none d-lg-flex justify-content-between align-items-center">
+                <div class="contact d-flex align-items-center">
+                    <div class="contact__location d-flex align-items-center">
+                        <img src="assets/icons/location-01.svg" alt="loc"/>
+                        <span class="nw">г. Екатеринбург</span>
                     </div>
-                    <!-- Лишний container. Центровка контента производится средствами Bootstrap с боковыми padding, 
-                     чтобы контент не "прилипал" к краям экрана. Вложенный в него дополнительный container добавляет общий
-                     внутренний отступ. -->
-                    <nav class="container nav-top ">
-                        <ul class="container__menu menu-top">
-                            <li class="menu-top__li"><a href="#">Оплата и доставка</a></li>
-                            <li class="menu-top__li"><a href="#">О компании</a></li>
-                            <li class="menu-top__li"><a href="#">Контакты</a></li>
-                            <li class="menu-top__li"><a href="#">Статьи</a></li>
-                        </ul>
-                    </nav>
+                    <div class="contact__phone d-flex align-items-center">
+                        <img src="assets/icons/Phone.svg" alt="Phone"/>
+                        <a href="tel:+7 (922) 181 36 75" class="nw">+7 (922) 181 36 75</a>
+                    </div>
+                    <div class="contact__time nw d-flex align-items-center">(10:00–23:00)</div>
                 </div>
-                <div class="container header-bot">
-                    <div class="header-bot__left">
-                        <!-- лишний класс hide-on-desktop. Соответствующие класс есть в Bootstrap -->
-                        <button class="hide-on-desktop" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><img src="assets/icons/menu-line-horizontal.svg" alt="menu">
+                <nav class="nav-top d-flex align-items-center">
+                    <ul class="menu menu-top">
+                        <li class="menu-top__li"><a href="#">Оплата и доставка</a></li>
+                        <li class="menu-top__li"><a href="#">О компании</a></li>
+                        <li class="menu-top__li"><a href="#">Контакты</a></li>
+                        <li class="menu-top__li"><a href="#">Статьи</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__bot d-flex align-items-center">
+                <div class="header__bot__left">
+                    <button class="open-lm d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#leftLabel" aria-controls="offcanvasExample"><img src="assets/icons/menu-line-horizontal.svg" alt="menu">
+                    </button>
+                    <a href="/index.html"><img src="assets/icons/Gurman-logo.svg" alt="Gurman" class="logo"/></a>
+                    <div class="btn-group d-none d-lg-flex">
+                        <button class="header__bot__btn d-none d-lg-flex" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            <img src="assets/icons/katakog-fish.svg" alt="fish" class="header__bot__fish"/>Каталог
                         </button>
-                        <!-- Логотип должен быть обертнут в тег a с ссылкой на главную страницу.
-                         Одиночные теги img, input, hr, br и другие принято прописывать в стандарте XML: перед ">" ставить "/".
-                         Пример: <img src="..." alt="..." /> -->
-                        <img src="assets/icons/Gurman-logo.svg" alt="Gurman" class="logo">
-                        <button class="header-bot__btn hide-on-mobile">
-                            <img src="assets/icons/katakog-fish.svg" alt="" class="header-bot__fish">Каталог
-                        </button>
-                        <div class="search hide-on-mobile">
-                            <input type="search" placeholder="Найти товар">
-                            <!-- иконку лучше вывести в фон кнопки, либо использовать svg -->
-                            <button><img src="assets/icons/search-01.svg" alt=""></button>
+                        <div class="dropdown-menu">
+                            <ul class="dropdown-menu__ul m5" id="top-katalog">
+                                <li class="dropdown-menu__item"><a href="#">Собственное производство</a></li>
+                                <li class="dropdown-menu__item"><a href="#">Икра красная</a></li>
+                                <li class="dropdown-menu__item"><a href="#">Консервация и деликатесы</a></li>
+                                <li class="dropdown-menu__item"><a href="#">Мясо, птица</a></li>
+                                <li class="dropdown-menu__item"><a href="#">Рыба</a></li>
+                                <li class="dropdown-menu__item"><a href="#">Морепродукты</a></li>
+                              </ul>
                         </div>
-                    </div>
- 
-                    <div class="basket-like">
-                        <button class="hide-on-desktop"><img src="assets/icons/search-mob.svg" alt=""></button>
-                        <button><img src="assets/icons/basket.svg" alt="basket "></button>
-                        <button><img src="assets/icons/like.svg" alt="like"></button>
+                      </div>
+                    <button class="">
+                    </button>
+                    <div class="header__bot__search d-none d-lg-flex font-btn">
+                        <input type="text" placeholder="Найти товар">
+                        <button class="header__bot__search__btn"></button>
                     </div>
                 </div>
-                
-                <!-- Выдвигающаяся панель не нужна шапки, так же и для SEO. Лучше вынести в самый низ перед подключением скриптов -->
-                <div class="offcanvas offcanvas-start left-m" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                    <div class="offcanvas-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
-                    </div>
-                    <div class="mob-top-menu flex-col flex-sb">
-                        <ul class="menu-left">
-                            <li>
-                                <!-- Коллапс не доделан. Вместо a, лучше использовать button, т.к. этот элемент никуда не ссылает -->
-                                <a class="" data-bs-toggle="collapse" href="#katalog" role="button" aria-expanded="false" aria-controls="collapseExample">Каталог
-                                </a>
-                                    <div class="collapse" id="katalog">
-                                    <div class="color-lighter h6">
-                                        <ul>
-                                            <li>Собственное производство</li>
-                                            <li>Икра красная</li>
-                                            <li>Консервация и деликатесы</li>
-                                            <li>Мясо, птица</li>
-                                            <li>Рыба</li>
-                                            <li>Морепродукты</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="mob-top-menu__li"><a href="#">Оплата и доставка</a></li>
-                            <li class="mob-top-menu__li"><a href="#">О компании</a></li>
-                            <li class="mob-top-menu__li"><a href="#">Контакты</a></li>
-                            <li class="mob-top-menu__li"><a href="#">Статьи</a></li>
-                        </ul>
-                        <div class="mob-bot flex-col">
-                            <span class="mob-text">г. Екатеринбург <br> Ежедневно с 10:00 до 21:00</span>
-                            <div class="icons">
-                                <!-- Должны быть ссылки с атрибутом target="_blank" -->
-                                <img src="assets/icons/telegram.svg" alt="">
-                                <img src="assets/icons/vk.svg" alt="">
-                            </div>
-                            <!-- Должен быть ссылкой с href="tel:номер_телефона" -->
-                            <button class="btn-phone">
-                                +7 (922) 181 36 75
-                            </button>
-                        </div>
-                    </div>
+
+                <div class="header__bot__basket-like">
+                    <button class="d-flex d-lg-none"><img src="assets/icons/search-mob.svg" alt=""/></button>
+                    <button><img src="assets/icons/basket.svg" alt="basket "/></button>
+                    <button><img src="assets/icons/like.svg" alt="like"/></button>
                 </div>
             </div>
-            <!-- </div> -->
         </header>   
+
+<!------------ main --------------->
 
         <main class="main">
             <div class="container"><p>Главная страница<br>Для современного мира начало повседневной работы по формированию позиции требует определения и уточнения позиции, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа укрепления демократической системы. Задача организации, в особенности же консультация с широким активом обеспечивает актуальность модели развития. Для современного мира курс на социально-ориентированный национальный проект способствует подготовке и реализации системы обучения кадров, соответствующей насущным потребностям. Равным образом новая модель организационной деятельности напрямую зависит от существующий финансовых и административных условий. Повседневная практика показывает, что понимание сущности ресурсосберегающих технологий представляет собой интересный эксперимент модели развития. Повседневная практика показывает, что рамки и место обучения кадров способствует повышению качества прогресса профессионального общества. Не следует, однако, забывать, что выбранный нами инновационный путь представляет собой интересный эксперимент системы обучения кадров, соответствующей насущным потребностям. Прежде всего новая модель организационной деятельности требует от нас анализа прогресса профессионального общества. Повседневная практика показывает, что выбранный нами инновационный путь позволяет выполнять важные задания по разработке поэтапного и последовательного развития общества.</p>
             </div>
         </main>
 
-        <footer class="footer">
-            <div class="container ">
-                <div class="row ">
-                    <div class="footer__col flex-col col-12 col-lg-3">
-                        <!-- аналогично с логотипом в шапке -->
-                        <img src="assets/icons/Footer-logo.svg" alt="Gurman" class="logo">
-                        <span>Paspaботано в LOBUT DIGITAL</span>
+<!------------ footer --------------->
+
+        <footer class="footer h6">
+            <div class="container d-flex flex-lg-row flex-column justify-content-between align-items-center align-items-lg-start text-lg-start text-center">
+                    <div class="footer__col d-flex flex-column justify-content-between">
+                        <a href="/index.html"><img src="assets/icons/Footer-logo.svg" alt="Gurman" class="logo"/></a>
+                        <span class="d-none d-lg-block footer__col__dev">Paspaботано в LOBUT DIGITAL</span>
                     </div>
-                    <!-- Нарушение семантики. Должен быть список ul/ol -->
-                    <div class="footer__col flex-col col-12 col-lg-2 h6">
-                        <span class="title h5">Каталог</span>
-                        <span>Охлажденная рыба</span>
-                        <span>Икра</span>
-                        <span>Морепродукты</span>
-                        <span>Рыба</span>
+                    <div class="footer__col d-flex h6">
+                        <ul>
+                            <ol class="footer__col__title h5"><a href="#">Каталог</a></ol>
+                            <ol class="footer__col__ol"><a href="#">Охлажденная рыба</a></ol>
+                            <ol class="footer__col__ol"><a href="#">Икра</a></ol>
+                            <ol class="footer__col__ol"><a href="#">Морепродукты</a></ol>
+                            <ol class="footer__col__ol"><a href="#">Рыба</a></ol>
+                        </ul>
                     </div>
-                    <div class="footer__col flex-col col-12 col-lg-2 h6">
-                        <span class="title h5">Категории</span>
-                        <span>Морепродукты</span>
-                        <span>Собственное производство</span>
-                        <span>Мясо, птица</span>
-                        <span>Консервация и деликатесы</span>
+                    <div class="footer__col d-flex h6">
+                        <!-- ul>ol.footer__col__title.h5>a[href=#]^(ol.footer__col__ol>a[href=#])*4 -->
+                        <ul>
+                            <ol class="footer__col__title h5"><a href="#">Категории</a></ol>
+                            <ol class="footer__col__ol"><a href="#">Морепродукты</a></ol>
+                            <ol class="footer__col__ol"><a href="#">Собственное производство</a></ol>
+                            <ol class="footer__col__ol"><a href="#">Мясо, птица</a></ol>
+                            <ol class="footer__col__ol"><a href="#">Консервация и деликатесы</a></ol>
+                        </ul>
                     </div>
-                    <div class="footer__col flex-col col-12 col-lg-2 h6">
-                        <span class="title h5">Информация</span>
-                        <span>Блог</span>
-                        <span>Вопросы и ответы</span>
-                        <span>Политика конфиденциальности</span>
-                        <span>Карта сайта</span>
+                    <div class="footer__col d-flex h6">
+                        <ul>
+                            <ol class="footer__col__title h5"><a href="#">Информация</a></ol>
+                            <ol class="footer__col__ol"><a href="#">Блог</a></ol>
+                            <ol class="footer__col__ol"><a href="#">Вопросы и ответы</a></ol>
+                            <ol class="footer__col__ol"><a href="#">Политика конфиденциальности</a></ol>
+                        </ul>
                     </div>
-                    <div class="footer__col flex-col col-12 col-lg-3 h6">
-                            <span class="title h5">Контакты</span>
-                            <span>г. Екатеринбург ул. Шефская д. 101</span>
-                            <!-- Должен быть ссылкой с href="tel:номер_телефона" -->
-                            <span>+7 (922) 181 36 75</span>
-                            <span>+7 (922) 201 95 20</span>
+                    <div class="footer__col d-flex h6">
+                        <ul>
+                            <ol class="footer__col__title h5"><a href="#">Контакты</a></ol>
+                            <ol class="footer__col__ol"><a href="#">г. Екатеринбург ул. Шефская д. 101</a></ol>
+                            <ol class="footer__col__ol"><a href="tel:+7 (922) 181 36 75">+7 (922) 181 36 75</a></ol>
+                            <ol class="footer__col__ol"><a href="tel:+7 (922) 201 95 20">+7 (922) 201 95 20</a></ol>
+                            <!-- ol.footer__col__ol*2>a:tel -->
+                        </ul>
                     </div>
-                </div>
+                    <span class="d-block d-lg-none h6">Paspaботано в LOBUT DIGITAL</span>
             </div>
         </footer>
+    </div>
+
+<!---------- Выдвигающаяся панель --------------->
+
+    <div class="offcanvas offcanvas-start left-m m4" tabindex="-1" id="leftLabel" aria-labelledby="offcanvasExampleLabel">
+        <div class="left-menu-top d-flex flex-column justify-content-between">
+            <div class="left-menu-top__main d-flex flex-column justify-content-between">
+                <div class="left-menu-top__header">
+                    <button type="button" class="" data-bs-dismiss="offcanvas" aria-label="Close"> <img src="assets/icons/remove.svg" alt="remove"></button>
+                </div>
+                <ul class="menu-left">
+                    <li>
+                        <button class="left-menu-top__main__btn" type="button" data-bs-toggle="collapse" data-bs-target="#katalog" aria-controls="offcanvasExample">Каталог<img class="dir-up" src="assets/icons/direction-up.svg" alt="">
+                        </button>
+                        <div class="collapse left-menu-top__main__katalog" id="katalog">
+                            <div class="left-menu-top__main__list color-lighter m5">
+                                <ul>
+                                    <li>Собственное производство</li>
+                                    <li>Икра красная</li>
+                                    <li>Консервация и деликатесы</li>
+                                    <li>Мясо, птица</li>
+                                    <li>Рыба</li>
+                                    <li>Морепродукты</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mob-top-menu__li"><a href="#">Оплата и доставка</a></li>
+                    <li class="mob-top-menu__li "><a href="#">О компании</a></li>
+                    <li class="mob-top-menu__li"><a href="#">Контакты</a></li>
+                    <li class="mob-top-menu__li"><a href="#">Статьи</a></li>
+                </ul>
+            </div>
+            <div class="mob-bot d-flex flex-column m5">
+                <div class="mob-bot_loc d-flex flex-column m5"><span>г. Екатеринбург</span><span>Ежедневно с 10:00 до 21:00</span></div>
+                <div class="icons">
+                    <a href="#" target="_blank" rel="noopener noreferrer"><img src="assets/icons/telegram.svg" alt=""/></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><img src="assets/icons/vk.svg" alt=""/></a>
+                </div>
+                <a href="tel:+7 (922) 181 36 75" class="btn-phone font-btn">+7 (922) 181 36 75</a>
+            </div>
+        </div>
     </div>
 
     <!-- LIB -->

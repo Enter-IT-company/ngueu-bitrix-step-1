@@ -1,0 +1,406 @@
+$fon-white: #fff;
+$fon-gold: #F8F5F0;
+$text-darker: #393E51;
+$text-lighter: #5F6371;
+$text-lighter60: rgb(95,99,113, 60%);
+$prima-blue: #3D518C;
+$prima-gold: #BDAA8A;
+$hover-blue: #334681;
+$hover-light: #F8F5F0;
+$hover-lighter: #FDFAF6;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+ 
+:root {
+    --bs-body-font-family: "Raleway", sans-serif;
+}
+.h1 {
+    font-size: 50px;
+    font-weight: $bold;
+    font-family: "Champagne & Limousines", sans-serif;
+}
+.h2 {
+    font-size: 30px;
+    font-weight: $bold;
+    font-family: "Champagne & Limousines", sans-serif;
+}
+.h3 {
+    font-size: 20px;
+    font-weight: $medium;
+}
+.h4 {
+    font-size: 18px;
+    font-weight: $regular;
+}
+.font-btn {
+    font-size: 16px;
+    font-weight: $medium;
+}
+.h5 {
+    font-size: 16px;
+    font-weight: $medium;
+}
+
+.h6 {
+    font-size: 14px;
+    font-weight: $regular;
+    margin-bottom: 0;
+}
+
+.m1 {
+    font-size: 33px;
+    font-weight: $bold;
+    font-family: "Champagne & Limousines", sans-serif;
+}
+.m2 {
+    font-size: 25px;
+    font-weight: $bold;
+    font-family: "Champagne & Limousines", sans-serif;
+}
+
+.m3 {
+    font-size: 18px;
+    font-weight: $medium;
+}
+
+.m4 {
+    font-size: 16px;
+    font-weight: $regular;
+}
+
+.m5 {
+    font-size: 14px;
+    font-weight: $medium;
+}
+
+.m5-reg {
+    font-size: 16px;
+    font-weight: $regular;
+}
+
+
+.color-lighter {
+    color: $text-lighter60;
+}
+
+.offcanvas {
+    --bs-offcanvas-width: 280px;
+}
+
+$offcanvas-horizontal-width: 200px;
+
+.text-center {
+    text-align: center;
+}
+
+ul {
+    padding-inline-start: 0;
+    margin: 0;
+}
+
+
+.wrapper {
+    background: white;
+    min-height: 100vh;
+}
+
+.nw {
+    white-space: nowrap;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: $text-darker;
+    text-decoration: none;
+}
+
+button {
+    margin: 0;
+    border: none;
+    background: inherit;
+    color: inherit;
+    padding: 0;
+}
+// --------------- header ------------------
+.header {
+    background: white;
+    position: sticky;
+    top: 0;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    color: $text-darker;
+    &__top {
+        height: 40px;
+    }
+    &__bot {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 16px;
+        &__left {
+            display: flex;
+            flex-direction: row;
+        }
+    
+        &__btn {
+            width: 175px;
+            height: 46px;
+            border-radius: 10px;
+            border: none;
+            background: $prima-blue;
+            color: $hover-light;
+            display: flex;
+            align-items: center;
+            margin-left: 32px;
+            margin-right: 24px;
+
+        }
+    
+        &__fish {
+            margin: 11px 8px 16px 32px;
+        }
+        &__search {
+            width: 400px;
+            border-radius: 10px;
+            border-top-color: $prima-gold;
+            border: 1px solid $prima-gold;
+            display: flex;
+            align-items: center;
+        
+            input {
+                padding-left: 16px;
+                width: 90%;
+                height: 22px;
+                border: none;
+                background: inherit;
+                color: $prima-gold;
+        
+                &:active,
+                &:hover,
+                &:focus {
+                    outline: 0;
+                    outline-offset: 0;
+                }
+
+                &::placeholder {
+                    color: $prima-gold;
+                }
+            }
+            &__btn {
+                background-image: url('/assets/icons/search-01.svg');
+                height: 24px;
+                width: 24px;
+            }
+        }
+        
+        &__basket-like {
+            display: flex;
+            align-items: center;
+        
+            button {
+                margin-right: 24px;
+        
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+.dropdown-menu {
+    width: 175px;
+    &__ul {
+        margin-left: 35px;
+        margin-top: 20px;
+    }
+    &__item {
+        margin-bottom: 8px;
+        &:last-child {
+            margin-bottom: 20px;
+        }
+    }
+}
+.open-lm {
+    padding: 0;
+    margin-right: 16px;
+}
+.contact {
+    height: 24px;
+    &__location {
+        margin-right: 24px;
+    }
+
+    &__phone {
+        margin: 0 8px 0 0;
+    }
+
+    &__time {
+        color: $prima-gold;
+        margin: 0;
+    }
+
+    img {
+        color: $text-darker;
+        margin: 0 8px 0 0;
+    }
+}
+
+.menu-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 24px;
+}
+
+.icons {
+    img {
+        margin-right: 10px;
+    }
+}
+
+// --------------- main ----------------
+.main {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+}
+
+// --------------- footer ----------------
+.footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    min-height: 211px;
+    background: $prima-blue;
+    color: white;
+    a {
+        color: white;
+    }
+    &__col {
+        // margin-right: 80px;
+        // &:last-child {
+        //     margin-right: 0;
+        // }
+        &__dev {
+            margin-top: 46px;
+        }
+        &__title {
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        &__ol {
+            padding: 0;
+            margin-bottom: 8px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        img {
+            width: 150px;
+            height: 66px;
+        }
+    }
+}
+// -------------- left-menu ----------------
+.left-menu-top {
+    margin: 12px 20px auto 20px;
+    color: $text-darker;
+    height: 100%;
+    &__header{
+        padding-bottom: 20px;
+    }
+
+    &__main {
+    
+        li {
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &__btn {
+            padding: 0;
+        }
+        &__list {
+            li {
+                margin-bottom: 12px;
+                &:first-child {
+                    margin-top: 12px;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+.mob-bot {
+    width: 240px;
+    justify-content: center;
+    padding-bottom: 10px;
+    gap: 20px;
+    &__loc {
+        gap: 4px;
+    }
+}
+
+.btn-phone {
+    width: 240px;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    background: $prima-gold;
+}
+.dir-up {
+    transition: transform 0.3s ease;
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.rotate {
+    transform: rotate(180deg); 
+}
+// --------------- adaptive ----------------
+
+@media (max-width: 992px) {
+    .footer {
+        padding-top: 50px;
+        padding-bottom: 30px;
+        &__col {
+            padding-top: 0;
+            margin-right: 0;
+            margin-bottom: 20px;
+            &__title {
+                margin-bottom: 16px;
+            }
+            &__ol {
+                margin-bottom: 4px;
+            }
+        }
+        img {
+            height: 40px;
+        }
+    }
+    .logo {
+        height: 24px;
+    }
+    .header{
+        &__bot{
+            &__basket-like {
+                button {
+                    margin-right: 16px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
