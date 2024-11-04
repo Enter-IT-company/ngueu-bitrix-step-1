@@ -161,11 +161,12 @@ button {
 }
 .header__bot__search input {
   padding-left: 16px;
-  width: 90%;
+  width: 85%;
   height: 22px;
   border: none;
   background: inherit;
   color: #BDAA8A;
+  margin-right: 24px;
 }
 .header__bot__search input:active, .header__bot__search input:hover, .header__bot__search input:focus {
   outline: 0;

@@ -173,11 +173,12 @@ button {
         
             input {
                 padding-left: 16px;
-                width: 90%;
+                width: 85%;
                 height: 22px;
                 border: none;
                 background: inherit;
                 color: $prima-gold;
+                margin-right: 24px;
         
                 &:active,
                 &:hover,
