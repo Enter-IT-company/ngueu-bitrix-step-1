@@ -32,8 +32,11 @@
                     </div>
                     <div class="contact__phone d-flex align-items-center">
                         <img src="assets/icons/Phone.svg" alt="Phone"/>
+                        <!-- телефон в href нужно прописывать в виде +79221813675, 
+                         т.е. без лишних знаков и пробелов -->
                         <a href="tel:+7 (922) 181 36 75" class="nw">+7 (922) 181 36 75</a>
                     </div>
+                    <!-- по сенимантике лучше тег заменить на time -->
                     <div class="contact__time nw d-flex align-items-center">(10:00–23:00)</div>
                 </div>
                 <nav class="nav-top d-flex align-items-center">
@@ -54,6 +57,7 @@
                         <button class="header__bot__btn d-none d-lg-flex" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                             <img src="assets/icons/katakog-fish.svg" alt="fish" class="header__bot__fish"/>Каталог
                         </button>
+                        <!-- зона навигации, логичнее тег обозначить как nav, вместо div -->
                         <div class="dropdown-menu">
                             <ul class="dropdown-menu__ul m5" id="top-katalog">
                                 <li class="dropdown-menu__item"><a href="#">Собственное производство</a></li>
@@ -69,12 +73,14 @@
                     </button>
                     <div class="header__bot__search d-none d-lg-flex font-btn">
                         <input type="text" placeholder="Найти товар">
+                        <!-- на сайте кнопку не видно -->
                         <button class="header__bot__search__btn"></button>
                     </div>
                 </div>
 
                 <div class="header__bot__basket-like">
                     <button class="d-flex d-lg-none"><img src="assets/icons/search-mob.svg" alt=""/></button>
+                    <!-- basket и like являются ссылками -->
                     <button><img src="assets/icons/basket.svg" alt="basket "/></button>
                     <button><img src="assets/icons/like.svg" alt="like"/></button>
                 </div>
@@ -96,9 +102,12 @@
                         <a href="/index.html"><img src="assets/icons/Footer-logo.svg" alt="Gurman" class="logo"/></a>
                         <span class="d-none d-lg-block footer__col__dev">Paspaботано в LOBUT DIGITAL</span>
                     </div>
+                    <!-- лучше заменить div на nav -->
                     <div class="footer__col d-flex h6">
                         <ul>
+                            <!--не является ссылкой -->
                             <li class="footer__col__title h5"><a href="#">Каталог</a></li>
+
                             <li class="footer__col__li"><a href="#">Охлажденная рыба</a></li>
                             <li class="footer__col__li"><a href="#">Икра</a></li>
                             <li class="footer__col__li"><a href="#">Морепродукты</a></li>
@@ -108,7 +117,9 @@
                     <div class="footer__col d-flex h6">
                         <!-- ul>li.footer__col__title.h5>a[href=#]^(li.footer__col__li>a[href=#])*4 -->
                         <ul>
+                            <!--не является ссылкой -->
                             <li class="footer__col__title h5"><a href="#">Категории</a></li>
+
                             <li class="footer__col__li"><a href="#">Морепродукты</a></li>
                             <li class="footer__col__li"><a href="#">Собственное производство</a></li>
                             <li class="footer__col__li"><a href="#">Мясо, птица</a></li>
@@ -117,7 +128,9 @@
                     </div>
                     <div class="footer__col d-flex h6">
                         <ul>
+                            <!--не является ссылкой -->
                             <li class="footer__col__title h5"><a href="#">Информация</a></li>
+
                             <li class="footer__col__li"><a href="#">Блог</a></li>
                             <li class="footer__col__li"><a href="#">Вопросы и ответы</a></li>
                             <li class="footer__col__li"><a href="#">Политика конфиденциальности</a></li>
@@ -125,8 +138,12 @@
                     </div>
                     <div class="footer__col d-flex h6">
                         <ul>
+                            <!--не является ссылкой -->
                             <li class="footer__col__title h5"><a href="#">Контакты</a></li>
+
+                            <!--не является ссылкой -->
                             <li class="footer__col__li"><a href="#">г. Екатеринбург ул. Шефская д. 101</a></li>
+
                             <li class="footer__col__li"><a href="tel:+7 (922) 181 36 75">+7 (922) 181 36 75</a></li>
                             <li class="footer__col__li"><a href="tel:+7 (922) 201 95 20">+7 (922) 201 95 20</a></li>
                             <!-- li.footer__col__li*2>a:tel -->
@@ -151,6 +168,7 @@
                         </button>
                         <div class="collapse left-menu-top__main__katalog" id="katalog">
                             <div class="left-menu-top__main__list color-lighter m5">
+                                <!-- является навигацией -->
                                 <ul>
                                     <li>Собственное производство</li>
                                     <li>Икра красная</li>
