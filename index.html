@@ -32,15 +32,13 @@
                     </div>
                     <div class="contact__phone d-flex align-items-center">
                         <img src="assets/icons/Phone.svg" alt="Phone"/>
-                        <!-- телефон в href нужно прописывать в виде +79221813675, 
-                         т.е. без лишних знаков и пробелов -->
-                        <a href="tel:+7 (922) 181 36 75" class="nw">+7 (922) 181 36 75</a>
+                        <a href="tel:+79221813675" class="nw">+7 (922) 181 36 75</a>
                     </div>
                     <!-- по сенимантике лучше тег заменить на time -->
-                    <div class="contact__time nw d-flex align-items-center">(10:00–23:00)</div>
+                    <time datetime="10:00-23:00" class="contact__time nw d-flex align-items-center">(10:00–23:00)</time>
                 </div>
                 <nav class="nav-top d-flex align-items-center">
-                    <ul class="menu menu-top">
+                    <ul class="menu-top">
                         <li class="menu-top__li"><a href="#">Оплата и доставка</a></li>
                         <li class="menu-top__li"><a href="#">О компании</a></li>
                         <li class="menu-top__li"><a href="#">Контакты</a></li>
@@ -48,17 +46,16 @@
                     </ul>
                 </nav>
             </div>
-            <div class="header__bot d-flex align-items-center">
-                <div class="header__bot__left">
+            <div class="header-bot d-flex align-items-center">
+                <div class="header-bot__left">
                     <button class="open-lm d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#leftLabel" aria-controls="offcanvasExample"><img src="assets/icons/menu-line-horizontal.svg" alt="menu">
                     </button>
                     <a href="/index.html"><img src="assets/icons/Gurman-logo.svg" alt="Gurman" class="logo"/></a>
-                    <div class="btn-group d-none d-lg-flex">
-                        <button class="header__bot__btn d-none d-lg-flex" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                            <img src="assets/icons/katakog-fish.svg" alt="fish" class="header__bot__fish"/>Каталог
+                    <div class="btn-group d-none d-lg-flex" id="btn-group">
+                        <button class="header-bot__btn btn-blue d-none d-lg-flex" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            <img src="assets/icons/katakog-fish.svg" alt="fish" class="header-bot__fish"/>Каталог
                         </button>
-                        <!-- зона навигации, логичнее тег обозначить как nav, вместо div -->
-                        <div class="dropdown-menu">
+                        <nav class="dropdown-menu" id="drod-m">
                             <ul class="dropdown-menu__ul m5" id="top-katalog">
                                 <li class="dropdown-menu__item"><a href="#">Собственное производство</a></li>
                                 <li class="dropdown-menu__item"><a href="#">Икра красная</a></li>
@@ -67,22 +64,42 @@
                                 <li class="dropdown-menu__item"><a href="#">Рыба</a></li>
                                 <li class="dropdown-menu__item"><a href="#">Морепродукты</a></li>
                               </ul>
-                        </div>
+                        </nav>
                       </div>
                     <button class="">
                     </button>
-                    <div class="header__bot__search d-none d-lg-flex font-btn">
+                    <div class="header-search d-none d-lg-flex font-btn">
                         <input type="text" placeholder="Найти товар">
-                        <!-- на сайте кнопку не видно -->
-                        <button class="header__bot__search__btn"></button>
+                        <button class="header-search__btn">                        
+                            <svg class="icons-gold" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5 17.5L22 22L17.5 17.5Z" fill="#BDAA8A"/>
+                                <path d="M17.5 17.5L22 22" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
 
-                <div class="header__bot__basket-like">
-                    <button class="d-flex d-lg-none"><img src="assets/icons/search-mob.svg" alt=""/></button>
+                <div class="basket-like">
+                    <button class="d-flex d-lg-none basket-like__icon">
+                        <svg class="icons-blue" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.5 17.5L22 22L17.5 17.5Z" fill="#BDAA8A"/>
+                            <path d="M17.5 17.5L22 22" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z" stroke-linejoin="round"/>
+                        </svg></button>
                     <!-- basket и like являются ссылками -->
-                    <button><img src="assets/icons/basket.svg" alt="basket "/></button>
-                    <button><img src="assets/icons/like.svg" alt="like"/></button>
+                    <a class="basket-like__icon" href="#">
+                        <svg class="icons-blue" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.54474 5.10492H19.7807C21.2938 5.10492 22.5204 6.33154 22.5204 7.84465V15.1967C22.5204 16.7098 21.2938 17.9364 19.7807 17.9364H9.14082C7.81453 17.9364 6.67869 16.9864 6.44424 15.681L4.54474 5.10492ZM4.54474 5.10492L3.78103 2.8639C3.68648 2.58644 3.42584 2.3999 3.13271 2.3999H0.857422" stroke-linecap="round"/>
+                            <path d="M10.6299 21.6855H10.6413" stroke-linecap="round"/>
+                            <path d="M19.083 21.6855H19.0944" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                    <a class="basket-like__icon" href="#">
+                        <svg class="icons-blue" width="24" height="24" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.4626 1.99415C15.7809 0.349231 13.4404 1.01211 12.0344 2.06801C11.4578 2.50096 11.1696 2.71743 11 2.71743C10.8304 2.71743 10.5422 2.50096 9.9656 2.06801C8.55962 1.01211 6.21909 0.349231 3.53744 1.99415C0.0180688 4.15294 -0.77828 11.2749 7.33953 17.2834C8.88572 18.4278 9.6588 19 11 19C12.3412 19 13.1143 18.4278 14.6605 17.2834C22.7783 11.2749 21.9819 4.15294 18.4626 1.99415Z" stroke-linecap="round"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </header>   
@@ -100,56 +117,48 @@
             <div class="container d-flex flex-lg-row flex-column justify-content-between align-items-center align-items-lg-start text-lg-start text-center">
                     <div class="footer__col d-flex flex-column justify-content-between">
                         <a href="/index.html"><img src="assets/icons/Footer-logo.svg" alt="Gurman" class="logo"/></a>
-                        <span class="d-none d-lg-block footer__col__dev">Paspaботано в LOBUT DIGITAL</span>
+                        <span class="d-none d-lg-block footer__dev">Разpaботано в <a class="lob-dig" href="#">LOBUT DIGITAL</a></span>
                     </div>
-                    <!-- лучше заменить div на nav -->
-                    <div class="footer__col d-flex h6">
+                    <nav class="footer__col d-flex h6">
                         <ul>
-                            <!--не является ссылкой -->
-                            <li class="footer__col__title h5"><a href="#">Каталог</a></li>
+                            <li class="footer__title h3">Каталог</li>
 
-                            <li class="footer__col__li"><a href="#">Охлажденная рыба</a></li>
-                            <li class="footer__col__li"><a href="#">Икра</a></li>
-                            <li class="footer__col__li"><a href="#">Морепродукты</a></li>
-                            <li class="footer__col__li"><a href="#">Рыба</a></li>
+                            <li class="footer__li"><a href="#">Охлажденная рыба</a></li>
+                            <li class="footer__li"><a href="#">Икра</a></li>
+                            <li class="footer__li"><a href="#">Морепродукты</a></li>
+                            <li class="footer__li"><a href="#">Рыба</a></li>
                         </ul>
-                    </div>
+                    </nav>
                     <div class="footer__col d-flex h6">
-                        <!-- ul>li.footer__col__title.h5>a[href=#]^(li.footer__col__li>a[href=#])*4 -->
+                        <!-- ul>li.footer__title.h5>a[href=#]^(li.footer__li>a[href=#])*4 -->
                         <ul>
-                            <!--не является ссылкой -->
-                            <li class="footer__col__title h5"><a href="#">Категории</a></li>
+                            <li class="footer__title h3">Категории</li>
 
-                            <li class="footer__col__li"><a href="#">Морепродукты</a></li>
-                            <li class="footer__col__li"><a href="#">Собственное производство</a></li>
-                            <li class="footer__col__li"><a href="#">Мясо, птица</a></li>
-                            <li class="footer__col__li"><a href="#">Консервация и деликатесы</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__col d-flex h6">
-                        <ul>
-                            <!--не является ссылкой -->
-                            <li class="footer__col__title h5"><a href="#">Информация</a></li>
-
-                            <li class="footer__col__li"><a href="#">Блог</a></li>
-                            <li class="footer__col__li"><a href="#">Вопросы и ответы</a></li>
-                            <li class="footer__col__li"><a href="#">Политика конфиденциальности</a></li>
+                            <li class="footer__li"><a href="#">Морепродукты</a></li>
+                            <li class="footer__li"><a href="#">Собственное производство</a></li>
+                            <li class="footer__li"><a href="#">Мясо, птица</a></li>
+                            <li class="footer__li"><a href="#">Консервация и деликатесы</a></li>
                         </ul>
                     </div>
                     <div class="footer__col d-flex h6">
                         <ul>
-                            <!--не является ссылкой -->
-                            <li class="footer__col__title h5"><a href="#">Контакты</a></li>
+                            <li class="footer__title h3">Информация</li>
 
-                            <!--не является ссылкой -->
-                            <li class="footer__col__li"><a href="#">г. Екатеринбург ул. Шефская д. 101</a></li>
-
-                            <li class="footer__col__li"><a href="tel:+7 (922) 181 36 75">+7 (922) 181 36 75</a></li>
-                            <li class="footer__col__li"><a href="tel:+7 (922) 201 95 20">+7 (922) 201 95 20</a></li>
-                            <!-- li.footer__col__li*2>a:tel -->
+                            <li class="footer__li"><a href="#">Блог</a></li>
+                            <li class="footer__li"><a href="#">Вопросы и ответы</a></li>
+                            <li class="footer__li"><a href="#">Политика конфиденциальности</a></li>
                         </ul>
                     </div>
-                    <span class="d-block d-lg-none h6">Paspaботано в LOBUT DIGITAL</span>
+                    <div class="footer__col d-flex h6">
+                        <ul>
+                            <li class="footer__title h3">Контакты</li>
+                            <li class="footer__li">г. Екатеринбург ул. Шефская д. 101</li>
+                            <li class="footer__li"><a href="tel:+79221813675">+7 (922) 181 36 75</a></li>
+                            <li class="footer__li"><a href="tel:+79222019520">+7 (922) 201 95 20</a></li>
+                            <!-- li.footer__li*2>a:tel -->
+                        </ul>
+                    </div>
+                    <span class="d-block d-lg-none h6">Paзpaботано в <a class="lob-dig" href="#">LOBUT DIGITAL</a></span>
             </div>
         </footer>
     </div>
@@ -163,22 +172,19 @@
                     <button type="button" class="" data-bs-dismiss="offcanvas" aria-label="Close"> <img src="assets/icons/remove.svg" alt="remove"></button>
                 </div>
                 <ul class="menu-left">
-                    <li>
+                    <li class="mob-top-menu__li">
                         <button class="left-menu-top__main__btn" type="button" data-bs-toggle="collapse" data-bs-target="#katalog" aria-controls="offcanvasExample">Каталог<img class="dir-up" src="assets/icons/direction-up.svg" alt="">
                         </button>
-                        <div class="collapse left-menu-top__main__katalog" id="katalog">
-                            <div class="left-menu-top__main__list color-lighter m5">
-                                <!-- является навигацией -->
-                                <ul>
-                                    <li>Собственное производство</li>
-                                    <li>Икра красная</li>
-                                    <li>Консервация и деликатесы</li>
-                                    <li>Мясо, птица</li>
-                                    <li>Рыба</li>
-                                    <li>Морепродукты</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <nav class="collapse left-menu-top__list color-lighter m5" id="katalog">
+                            <ul>
+                                <li class="list-li"><a class="color-lighter" href="#">Собственное производство</a></li>
+                                <li class="list-li"><a class="color-lighter" href="#">Икра красная</a></li>
+                                <li class="list-li"><a class="color-lighter" href="#">Консервация и деликатесы</a></li>
+                                <li class="list-li"><a class="color-lighter" href="#">Мясо, птица</a></li>
+                                <li class="list-li"><a class="color-lighter" href="#">Рыба</a></li>
+                                <li class="list-li"><a class="color-lighter" href="#">Морепродукты</a></li>
+                            </ul>
+                        </nav>
                     </li>
                     <li class="mob-top-menu__li"><a href="#">Оплата и доставка</a></li>
                     <li class="mob-top-menu__li "><a href="#">О компании</a></li>
@@ -187,12 +193,20 @@
                 </ul>
             </div>
             <div class="mob-bot d-flex flex-column m5">
-                <div class="mob-bot_loc d-flex flex-column m5"><span>г. Екатеринбург</span><span>Ежедневно с 10:00 до 21:00</span></div>
-                <div class="icons">
-                    <a href="#" target="_blank" rel="noopener noreferrer"><img src="assets/icons/telegram.svg" alt=""/></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer"><img src="assets/icons/vk.svg" alt=""/></a>
+                <div class="mob-bot_loc d-flex flex-column m5"><span>г. Екатеринбург</span><time datetime="Mo-Su,10:00-21:00">Ежедневно с 10:00 до 21:00</time></div>
+                <div class="messengers d-flex flex-row">
+                    <a class="d-block" href="#" target="_blank" rel="noopener noreferrer">
+                        <svg class="icons-gold" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.5248 4.05879C20.1482 3.74394 19.6307 3.66292 19.1771 3.8478L3.81963 10.099C3.14407 10.3793 2.82185 11.1587 3.09991 11.8398C3.24373 12.1921 3.53 12.4654 3.88659 12.5911L7.19966 13.7524L8.99515 19.7377C8.99876 19.7499 9.00985 19.7573 9.01451 19.7691C9.03308 19.8168 9.06023 19.8607 9.0945 19.8986C9.10727 19.9138 9.12118 19.9281 9.13604 19.9413C9.18077 19.9788 9.23272 20.0065 9.28859 20.0226C9.29712 20.0251 9.30282 20.0328 9.31151 20.0348L9.31653 20.0346L9.31904 20.0356C9.34766 20.0421 9.37685 20.0452 9.4061 20.0449C9.44434 20.0435 9.48227 20.0369 9.51868 20.0251C9.52574 20.0232 9.53286 20.0237 9.53976 20.0214C9.60197 19.9993 9.65816 19.963 9.70393 19.9152C9.70927 19.9098 9.71738 19.9088 9.7225 19.9031L12.3057 17.0295L16.0741 19.9715C16.3031 20.152 16.5854 20.2501 16.876 20.25C17.5046 20.2499 18.0473 19.8059 18.1768 19.1858L20.9734 5.34328C21.0703 4.86445 20.8979 4.37073 20.5248 4.05879ZM9.93266 14.8875L9.32647 17.8576L8.0623 13.6422L14.3322 10.3504L10.049 14.6689C9.98979 14.7287 9.94935 14.8047 9.93266 14.8875ZM17.3373 19.0119C17.3044 19.171 17.1918 19.3015 17.0401 19.3563C16.8919 19.4137 16.7244 19.3881 16.5998 19.2887L12.5167 16.1011C12.3399 15.9631 12.0876 15.9856 11.9374 16.1526L10.1411 18.1508L10.7463 15.1888L16.9079 8.97565C17.0753 8.80712 17.0756 8.53368 16.9084 8.36489C16.7762 8.23129 16.5733 8.19974 16.4073 8.28699L7.52439 12.9508L4.167 11.7742C3.984 11.7135 3.85954 11.5422 3.85729 11.348C3.84845 11.1524 3.96329 10.9726 4.14357 10.8999L19.4986 4.64955C19.659 4.58093 19.844 4.60968 19.9765 4.72382C20.1084 4.83111 20.1689 5.00417 20.133 5.17112L17.3373 19.0119Z"/>
+                        </svg>
+                    </a>
+                    <a class="d-block" href="#" target="_blank" rel="noopener noreferrer">
+                        <svg class="icons-gold" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.5 6.5H4.5C4.5 6.5 6.81 12.5 9 12.5C9.41 12.5 9.5 11.75 9.5 9.5C9.5 7.25 8.91 6.5 8.5 6.5C8.5 6.09 9.28 5.5 11.5 5.5C13.72 5.5 13.5 5.56 13.5 6.5V10.5C13.5 11.66 13.88 12.5 14.5 12.5C15.12 12.5 18.72 8.06 19 6.5H23.5C23.5 7.03 19.5 12.56 19.5 13C19.5 13.44 23.5 17.5 23.5 18C23.5 18.5 22.63 18.5 21.5 18.5H19C18.41 18.5 15.84 15.5 14.5 15.5C13.16 15.5 14.22 18.5 13 18.5H11C7.28 18.5 1 9.41 0.5 6.5Z" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
                 </div>
-                <a href="tel:+7 (922) 181 36 75" class="btn-phone font-btn">+7 (922) 181 36 75</a>
+                <a href="tel:+79221813675" class="btn-phone font-btn">+7 (922) 181 36 75</a>
             </div>
         </div>
     </div>
