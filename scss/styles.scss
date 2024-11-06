@@ -466,8 +466,13 @@ button {
             padding-top: 0;
             margin-right: 0;
             margin-bottom: 20px;
+
         }
 
+        &__col:first-child {
+            margin-bottom: 40px;
+        }
+    
         &__title {
             margin-bottom: 16px;
         }
