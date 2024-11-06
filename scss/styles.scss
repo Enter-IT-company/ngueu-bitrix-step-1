@@ -129,19 +129,19 @@ svg {
 a {
     color: $text-darker;
     text-decoration: none;
-    &:hover { /* не забывай про строку между селекторами */
+
+    &:hover {
         text-decoration: underline;
     }
 }
-/* если для самого селектора стили не назначаются,
-то текущее правило лучше прописать без вложенности */
-.btn-blue {
-    &:hover {
-        background: $btn-hover;
-    }
+
+.btn-blue:hover {
+    background: $btn-hover;
 }
+
 .icons-blue {
     stroke: $prima-blue;
+
     &:hover {
         stroke: $prima-gold;
     }
@@ -149,6 +149,7 @@ a {
 
 .icons-gold {
     stroke: $prima-gold;
+    
     &:hover {
         stroke: $prima-blue;
     }
@@ -193,6 +194,8 @@ button {
     &__left {
         display: flex;
         flex-direction: row;
+        flex-grow: 1;
+        margin-right: 24px;
     }
 
     &__btn {
@@ -210,22 +213,28 @@ button {
     }
 
     &__fish {
-        margin: 11px 8px 16px 32px;
+        margin: 11px 0 14px 0;
     }
 
 }
 
+.btn-img {
+    margin: 0 8px 0 32px;
+    width: 39px;
+}
+
 .header-search {
-    width: 500px;
+    max-width: 648px;
+    min-width: 400px;
     border-radius: 10px;
     border-top-color: $prima-gold;
     border: 1px solid $prima-gold;
     display: flex;
     align-items: center;
-
+    flex-grow: 1;
     input {
         padding-left: 16px;
-        width: 87%;
+        flex-grow: 1;
         height: 22px;
         border: none;
         background: inherit;
@@ -245,6 +254,7 @@ button {
     &__btn {
         height: 24px;
         width: 24px;
+        margin-right: 12px;
     }
 }
 
@@ -254,6 +264,7 @@ button {
 
     &__icon {
         margin-right: 24px;
+
         &:last-child {
             margin-right: 0;
         }
@@ -270,6 +281,7 @@ button {
 
     &__item {
         margin-bottom: 8px;
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -347,6 +359,7 @@ button {
     &__li {
         padding: 0;
         margin-bottom: 8px;
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -382,6 +395,7 @@ button {
 
     &__li {
         margin-bottom: 20px;
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -390,9 +404,11 @@ button {
 
 .list-li {
     margin-bottom: 12px;
+
     &:first-child {
         margin-top: 12px;
     }
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -400,6 +416,7 @@ button {
 
 .mob-top-menu__li {
     margin-bottom: 20px;
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -408,7 +425,7 @@ button {
 .mob-bot {
     width: 240px;
     justify-content: center;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     gap: 20px;
 
     &__loc {
@@ -417,6 +434,7 @@ button {
 }
 
 .btn-phone {
+    height: 38px;
     width: 240px;
     color: white;
     border-radius: 10px;

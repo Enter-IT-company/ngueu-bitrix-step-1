@@ -1,47 +1,39 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Working...'); // можно убрать
 
-    /** 
-     * 1. const, let и var разные операторы
-     * старайся избегать использование var.
-     * 2. Так же в JS для обозначение переменной,
-     * как элемент DOM-дерева принято именовать 
-     * с $ в начале (напр., $element).
-     * 3. Нарушены правила именования переменных.
-     * В JS переменные принято указывать в стиле camelCase,
-     * константы в стиле UPPER_CASE (кроме DOM-элементы, ибо они
-     * всегда должны быть константами).
-     * 4. Проведи код-ревью и улучшь оформление.
-     * Визуально раздели код на смысловые части:
-     * - Объявление переменных
-     * - Привязка первого события
-     * - Привязка второго события
-     * - Объявления другой группы переменных
-     * - Привязка события
-     * 5. В первых двух события ты используешь function, а в последнем
-     * arrow function. Приведи к одному стилю. Функции обратного вызова
-     * (коллбеки) принято оформлять с помощь arrow function.
-     */
-    const katalog_img = document.querySelector('.header-bot__fish');
-    var theDropdown = document.getElementById('btn-group');
-    theDropdown.addEventListener('show.bs.dropdown', function () {
-        katalog_img.src = 'assets/icons/katalog-remove.svg';
-        /**
-         * getElementsByClassName - устарело. Используй querySelector, querySelectorAll
-         * Зачем ищешь элемент, если ты его внес в переменную katalog_img?
-         */
-        document.getElementsByClassName('header-bot__fish')[0].style.margin = "15px 8px 15px 32px";
-    });
-    theDropdown.addEventListener('hide.bs.dropdown', function () {
-        katalog_img.src = 'assets/icons/katakog-fish.svg';
-        document.getElementsByClassName('header-bot__fish')[0].style.margin = "11px 8px 16px 32px";
+// -------------- Header button katalog img ---------------
+
+    const KATALOG_IMG = document.querySelector('.header-bot__fish');
+    const DROPDOWN = document.getElementById('btn-group');
+
+    // -------------- Header button katalog img after open---------------
+
+    DROPDOWN.addEventListener('show.bs.dropdown',() => {
+        KATALOG_IMG.src = 'assets/ICONs/katalog-remove.svg';
+        KATALOG_IMG.style.margin = "13px 0 13px 0";
     });
 
-    const left_menu_button = document.querySelector('.left-menu-top__main__btn');
-    const icon = document.querySelector('.dir-up');
-    left_menu_button.addEventListener('click', () => { 
-        icon.classList.toggle('rotate');
+    // -------------- Header button katalog img after close---------------
+
+    DROPDOWN.addEventListener('hide.bs.dropdown', () => {
+        KATALOG_IMG.src = 'assets/ICONs/katakog-fish.svg';
+        KATALOG_IMG.style.margin = "11px 0 14px 0";
+    });
+
+
+// -------------- Left menu katalog img ---------------
+
+    const LEFT_MENU_BUTTON = document.querySelector('.left-menu-top__main__btn');
+    const ICON = document.querySelector('.dir-up');
+
+    LEFT_MENU_BUTTON.addEventListener('click', () => { 
+        ICON.classList.toggle('rotate');
     });
 });
+
+/** 
+ * 2. Так же в JS для обозначение переменной,
+ * как элемент DOM-дерева принято именовать 
+ * с  в начале (напр., $element).
+ */
