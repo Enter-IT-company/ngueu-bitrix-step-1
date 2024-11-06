@@ -129,10 +129,12 @@ svg {
 a {
     color: $text-darker;
     text-decoration: none;
-    &:hover {
+    &:hover { /* не забывай про строку между селекторами */
         text-decoration: underline;
     }
 }
+/* если для самого селектора стили не назначаются,
+то текущее правило лучше прописать без вложенности */
 .btn-blue {
     &:hover {
         background: $btn-hover;
