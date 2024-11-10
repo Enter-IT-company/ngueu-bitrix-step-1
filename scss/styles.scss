@@ -92,6 +92,10 @@ $bold: 700;
     color: $text-lighter60;
 }
 
+.gold {
+    color: $prima-gold;
+}
+
 .offcanvas {
     --bs-offcanvas-width: 280px;
 }
@@ -164,8 +168,7 @@ button {
 }
 
 // --------------- header ------------------
-
-.header {
+header {
     background: white;
     position: sticky;
     top: 0;
@@ -173,10 +176,10 @@ button {
     margin-left: auto;
     margin-right: auto;
     color: $text-darker;
-
-    &__top {
-        height: 40px;
-    }
+    z-index: 100;
+}
+.header-top {
+    padding-top: 10px;
 }
 
 .menu-top {
@@ -327,6 +330,90 @@ button {
     background: white;
 }
 
+.Main-swiper {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 600px;
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.slide-btn {
+    background: white;
+    color: $prima-blue;
+    border-radius: 10px;
+    width: 192px;
+    height: 48px;
+
+    &:hover {
+        background: $hover-light;
+    }
+
+    &__text-btn {
+        padding: 14px 24px;
+    }
+}
+
+.slide1 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../assets/icons/Main screen swiper.svg");
+
+    &__text {
+        color: white;
+        height: inherit;
+    }
+}
+
+.slide2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../assets/icons/Main screen swiper2.svg");
+    
+    &__text {
+        color: white;
+        height: inherit;
+    }
+}
+
+.arrow {
+    stroke: white;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.left-arrow {
+    rotate: 180deg;
+    margin-right: 8px;
+}
+
+.img-box {
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-top: 100%; /* высота картинки. Процент высчитывается пропорционально от ее ширины. */
+}
+
+.img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* или contain */
+}
+
 // --------------- footer ----------------
 
 .footer {
@@ -335,7 +422,7 @@ button {
     min-height: 211px;
     background: $prima-blue;
     color: white;
-
+ 
     a {
         color: white;
     }
@@ -346,10 +433,6 @@ button {
     //         margin-right: 0;
     //     }
     // }
-
-    &__dev {
-        margin-top: 46px;
-    }
 
     &__title {
         padding: 0;
@@ -362,6 +445,7 @@ button {
 
         &:last-child {
             margin-bottom: 0;
+            
         }
     }
 
@@ -458,6 +542,11 @@ button {
 // --------------- adaptive ----------------
 
 @media (max-width: 992px) {
+
+    .Main-swiper {
+        height: 700px;
+    }
+
     .footer {
         padding-top: 50px;
         padding-bottom: 30px;

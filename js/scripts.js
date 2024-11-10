@@ -2,6 +2,17 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // -------------- Swiper ---------------
+
+    const SWIPER = new Swiper('.Main-swiper', {
+        loop: true,
+        effect: 'fade',
+        // autoplay: {
+        //     delay: 3000,
+        //     disableOnInteraction: false,
+        // }
+    });
+
 // -------------- Header button katalog img ---------------
 
     const KATALOG_IMG = document.querySelector('.header-bot__fish');
