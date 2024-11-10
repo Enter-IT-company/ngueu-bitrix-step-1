@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Champagne & Limousines";
+    src: url('regular.woff2') format('woff2'),
+        url('regular.woff') format('woff'),
+        url('regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Champagne & Limousines";
+    src: url('italic.woff2') format('woff2'),
+        url('italic.woff') format('woff'),
+        url('italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Champagne & Limousines";
+    src: url('bold.woff2') format('woff2'),
+        url('bold.woff') format('woff'),
+        url('bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Champagne & Limousines";
+    src: url('bold-italic.woff2') format('woff2'),
+        url('bold-italic.woff') format('woff'),
+        url('bold-italic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
