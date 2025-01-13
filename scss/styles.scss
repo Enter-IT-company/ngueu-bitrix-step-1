@@ -1,5 +1,7 @@
 $fon-white: #fff;
 $fon-gold: #F8F5F0;
+$fon-yellow: #F8F5F0;
+$text-yellow: #BDAA8A;
 $text-darker: #393E51;
 $text-lighter: #5F6371;
 $text-lighter60: rgb(95,99,113, 60%);
@@ -12,9 +14,11 @@ $btn-hover: #334681;
 $regular: 400;
 $medium: 500;
 $bold: 700;
- 
+$enable-cssgrid: true;
+
 :root {
     --bs-body-font-family: "Raleway", sans-serif;
+    
 }
 
 .h1 {
@@ -53,6 +57,32 @@ $bold: 700;
     font-size: 14px;
     font-weight: $regular;
     margin-bottom: 0;
+}
+
+.header-footer-h3 {
+    font-size: 20px;
+    font-weight: $medium;
+}
+
+.header-footer-h5 {
+    font-size: 16px;
+    font-weight: $medium;
+}
+
+.dop {
+    font-size: 12px;
+    font-weight: $regular;
+    margin-bottom: 0;
+}
+
+.about-font {
+    font-size: 16px;
+    font-weight: $regular;
+
+    p {
+        margin-block-end: 0;
+        margin-bottom: 16px;
+    }
 }
 
 .m1 {
@@ -178,6 +208,7 @@ header {
     color: $text-darker;
     z-index: 100;
 }
+
 .header-top {
     padding-top: 10px;
 }
@@ -330,6 +361,13 @@ header {
     background: white;
 }
 
+.main-content {
+    margin: 100px 0 0 0;
+    color: $text-darker;
+}
+
+// --------------- swiper ----------------
+
 .Main-swiper {
     width: 100%;
     max-width: 100%;
@@ -344,6 +382,23 @@ header {
             text-decoration: none;
         }
     }
+}
+
+.slider-group {
+    margin-top: 48px;
+}
+
+.slide-big-text {
+    line-height: 1.2;
+    font-size: 50px;
+    font-weight: $bold;
+    font-family: "Champagne & Limousines", sans-serif;
+}
+
+.slide-small-text {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: $regular;
 }
 
 .slide-btn {
@@ -393,26 +448,448 @@ header {
 }
 
 .left-arrow {
+    margin-left: 30px;
     rotate: 180deg;
     margin-right: 8px;
 }
 
+.swiper-pagination {
+    margin-bottom: 30px;
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    margin-right:  16px;
+}
+
+.swiper-pagination-bullet-active {
+    background: #fff;
+}
+
+// -------------- running line----------------
+
+.marquee {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    
+}
+
+.marquee-content {
+    width: auto;
+    display: inline-block;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.marquee-desktop {
+    height: 50px;
+    margin-top: 40px;
+    background-color: $fon-yellow;
+    font-family: "Champagne & Limousines", sans-serif;
+    font-size: 20px;
+    font-weight: $bold;
+    color: $text-yellow;
+
+    span {
+        display: inline-block;
+        padding-right: 80px;
+        
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+.marquee-mobile {
+    height: 50px;
+    background-color: $text-yellow;
+    font-family: "Champagne & Limousines", sans-serif;
+    font-size: 20px;
+    font-weight: $bold;
+    color: white;
+
+    span {
+        display: inline-block;
+        padding-right: 50px;
+        
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+//--------- popular categories -----------------
+
+.pop-categories {
+    // margin-bottom: 100px;
+
+    &__header {
+        margin-top: 100px;
+        margin-bottom: 31.5px;
+
+        &__title {
+            margin-right: 8px;
+        }
+    }
+
+    &__grid {
+        gap: 17px;
+    }
+
+    &__footer-btn-group {
+        margin-top: 20px;
+    }
+}
+
+.card {
+    background: $fon-gold;
+    height: 312px;
+    border-radius: 24px;
+    border: none;
+    // min-width: 300px;
+
+    &:hover {
+        background: #fef5e9;
+    }
+
+    &__text {
+        // width: 100%;
+        margin: 24px 0 0 24px;
+    }
+}
+
+#grid2 {
+    height: 632px;
+}
+
+.arrow-main {
+    stroke: $prima-blue;
+
+    &:hover {
+        stroke: white;
+        fill: $prima-blue;
+    }
+}
+
 .img-box {
+    display: flex;
+    justify-content: end;
+    align-items: end;
     position: relative;
     max-width: 100%;
     height: 100%;
     overflow: hidden;
-    padding-top: 100%; /* высота картинки. Процент высчитывается пропорционально от ее ширины. */
+    padding-bottom: 10px;
+    padding-right: 10px;
+    
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* или contain */
+    }
 }
 
-.img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* или contain */
+// .img {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover; /* или contain */
+// }
+
+// --------------- news ----------------
+
+.goods-slider {
+    margin-bottom: 100px;
+
+    &__header {
+        margin-bottom: 40px;
+    }
+
+    .swiper-button-disabled {
+        stroke: gray;
+        pointer-events: none; 
+    }
+
+
 }
+
+.goods-slider-card {
+    width: 250px;
+    height: auto;
+    border: #BDAA8A 1px solid;
+    border-radius: 24px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    &__img-box {
+        padding-top: 100%;
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+        display: block;
+        
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* или contain */
+        }
+    }
+
+    &__like {
+        position: absolute;
+        top: 0;
+        right: 0;
+        stroke: $prima-blue;
+
+        &:hover {
+            stroke: $prima-gold;
+        }
+    }
+
+    &__discount {
+        text-align: center;
+        font-size: 16px;
+        font-family: 'Raleway';
+        font-style: $regular;
+        color: white;
+        width: 51px;
+        background: $prima-blue;
+        border-radius: 10px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+
+    }
+
+    &__price-box {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    &__new-price {
+        margin-right: 8px;
+        color: $prima-blue;
+    }
+
+    &__old-price {
+        // color: gray;
+        text-decoration: line-through;
+    }
+
+    &__buy-box {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__stoke {
+        height: 16px;
+        width: 77px;
+        background: $fon-yellow;
+        border-radius: 4px;
+        color: $hover-blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .dot {
+            margin-right: 6px;
+            margin-left: 6px;
+        }
+    }
+
+    &__basket {
+        height: 40px;
+        width: 40px;
+        background: $prima-blue;
+        border-radius: 10px;
+        stroke: white;
+
+        &:hover {
+            background: $prima-gold; 
+        } 
+    }
+
+}
+
+// --------------- about us ----------------
+
+.about {
+
+    &__bg {
+        background: $fon-gold;
+    }
+
+    &__text-box {
+        margin-left: calc((100vw - 1280px) / 2);
+        padding: 115px 60px 154px 0;
+        color: $text-lighter;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        color: $text-darker;
+    }
+
+    &__img {
+        background: url('../assets/icons/Main screen swiper2.svg');
+        width: 100%;
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+// interesting
+
+.grid-interesting {
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.block-grid:nth-of-type(1) {
+    grid-area: 1 / 1 / 3 / 4;
+}
+
+.block-grid:nth-of-type(2) {
+    grid-area: 1 / 4 / 2 / 7;
+}
+
+.block-grid:nth-of-type(3) {
+    grid-area: 1 / 7 / 2 / 10;
+}
+
+.block-grid:nth-of-type(4) {
+    grid-area: 1 / 10 / 3 / 13;
+}
+
+.block-grid:nth-of-type(5) {
+    grid-area: 2 / 4 / 3 / 7;
+}
+
+.block-grid:nth-of-type(6) {
+    grid-area: 2 / 7 / 3 / 13;
+}
+
+// --------------- questions ----------------
+
+.questions {
+
+    margin-top: 100px;
+
+    &__bg {
+        background: $fon-gold;
+    }
+
+    &__text-box {
+        margin-left: 104px;
+        margin-right: auto;
+        padding: 115px 60px 154px 0;
+        color: $text-lighter;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        color: $text-darker;
+    }
+
+    &__img {
+        background: url('../assets/icons/questions.svg');
+        width: 100%;
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__btn {
+        margin-top: 40px;
+        width: 192px;
+        height: 48px;
+        background: $prima-blue;
+        border-radius: 10px;
+        color: $hover-light;
+
+        &:hover {
+            background: $hover-blue;
+        }
+    }
+
+}
+
+// --------------- recipes ----------------
+
+.recipe-card {
+    width: 250px;
+    height: 352px;
+
+    &__text {
+        color: white;
+    }
+}
+
+
+.recipe-card:nth-of-type(1) {
+    background: url('../assets/icons/recipe1.svg') no-repeat center center / cover;
+}
+
+.recipe-card:nth-of-type(2) {
+    background: url('../assets/icons/recipe2.svg') no-repeat center center / cover;
+}
+
+.recipe-card:nth-of-type(3) {
+    background: url('../assets/icons/recipe3.svg') no-repeat center center / cover;
+}
+
+.recipe-card:nth-of-type(4) {
+    background: url('../assets/icons/recipe4.svg') no-repeat center center / cover;
+}
+
+.recipe-card:nth-of-type(5) {
+    background: url('../assets/icons/recipe5.svg') no-repeat center center / cover;
+}
+
+
+// ---------------  faq   ----------------
+
+.faq {
+    margin-bottom: 48px;
+    margin-left: 20px;
+    color: $text-darker;
+}
+
+.accordion {
+    border: none;
+    color: $text-darker;
+}
+
+.accordion-button {
+    color: $text-darker;
+
+    &:focus {
+        box-shadow: none;
+        outline: none;
+        background-color: inherit;
+    }
+}
+
+
 
 // --------------- footer ----------------
 
@@ -535,17 +1012,165 @@ header {
 .rotate {
     transform: rotate(180deg); 
 }
+
 .messengers {
     gap: 24px;
 }
 
 // --------------- adaptive ----------------
 
+@media (max-width: 1280px) {
+    .about__text-box {
+        margin-left: auto;
+        padding-left: 40px;
+        // padding: 40px 0 0 20px;
+    }
+
+    .pop-categories__grid {
+        gap: 20px;
+    }
+
+    .grid-interesting {
+        grid-template-rows: auto;
+        grid-template-columns: 50% 50%;
+    }
+    
+    .block-grid {
+        grid-area: auto !important;
+    }
+
+    #grid2 {
+        height: 320px;
+    }
+
+}
+
 @media (max-width: 992px) {
+
+    // ------------- fonts ----------------
+
+    .h1 {
+        font-size: 33px;
+        font-weight: $bold;
+        font-family: "Champagne & Limousines", sans-serif;
+    }
+    
+    .h2 {
+        font-size: 25px;
+        font-weight: $bold;
+        font-family: "Champagne & Limousines", sans-serif;
+    }
+    
+    .h3 {
+        font-size: 18px;
+        font-weight: $medium;
+    }
+    
+    .h4 {
+        font-size: 16px;
+        font-weight: $regular;
+    }
+    
+    .h5 {
+        font-size: 14px;
+        font-weight: $medium;
+    }
+
+    .about-font {
+        font-size: 14px;
+        font-weight: $regular;
+        margin-bottom: 0;
+        
+    }
+
+// ------------- main ----------------
+
+    .main-content {
+        margin: 100px 20px 0 20px;
+    }
+
+    // ------------- swiper ---------------- 
 
     .Main-swiper {
         height: 700px;
     }
+
+    .slider-group {
+        margin-top: 40px;
+    }
+
+    .slide-small-text {
+        margin-top: 16px;
+        font-size: 16px;
+    }
+
+    .slide-big-text {
+        margin-top: 80px;
+        font-size: 33px;
+    }
+
+    .goods-slider  {
+        margin-bottom: 50px;
+    }
+
+    .pop-categories__grid {
+        gap: 10px;
+    }
+
+
+    .goods-slider-card {
+        width: 150px;
+        height: 316px;
+        padding: 8px;
+    }
+
+    .card {
+        max-height: 260px;
+    }
+
+
+    // -------------   grid   ----------------
+
+    .grid-interesting {
+        grid-template-rows: auto;
+        grid-template-columns: 100%;
+    }
+
+    .questions {
+
+        &__text-box {
+            margin-left: auto;
+            padding: 50px 20px;
+        }
+        
+        &__img {
+            height: 368px;
+            width: 100%;
+        }
+    }
+    
+
+
+    // ------------- about us ----------------
+
+    .about {
+
+        &__text-box {
+            margin-left: auto;
+            padding: 50px 20px;
+        }
+
+        &__img {
+            height: 368px;
+            width: 100%;
+        }
+
+        &__title {
+            margin-bottom: 20px;
+        }
+    }
+
+    /// --------------- footer ----------------
 
     .footer {
         padding-top: 50px;

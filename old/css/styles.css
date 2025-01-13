@@ -477,9 +477,6 @@ header {
 .pop-categories__header__title {
   margin-right: 8px;
 }
-.pop-categories__grid {
-  gap: 17px;
-}
 .pop-categories__footer-btn-group {
   margin-top: 20px;
 }
@@ -487,6 +484,7 @@ header {
 .card {
   background: #F8F5F0;
   height: 312px;
+  margin: 8.5px;
   border-radius: 24px;
   border: none;
 }
@@ -495,10 +493,6 @@ header {
 }
 .card__text {
   margin: 24px 0 0 24px;
-}
-
-#grid2 {
-  height: 632px;
 }
 
 .arrow-main {
@@ -648,117 +642,6 @@ header {
   background-size: cover;
 }
 
-.grid-interesting {
-  grid-template-rows: repeat(2, 1fr);
-}
-
-.block-grid:nth-of-type(1) {
-  grid-area: 1/1/3/4;
-}
-
-.block-grid:nth-of-type(2) {
-  grid-area: 1/4/2/7;
-}
-
-.block-grid:nth-of-type(3) {
-  grid-area: 1/7/2/10;
-}
-
-.block-grid:nth-of-type(4) {
-  grid-area: 1/10/3/13;
-}
-
-.block-grid:nth-of-type(5) {
-  grid-area: 2/4/3/7;
-}
-
-.block-grid:nth-of-type(6) {
-  grid-area: 2/7/3/13;
-}
-
-.questions {
-  margin-top: 100px;
-}
-.questions__bg {
-  background: #F8F5F0;
-}
-.questions__text-box {
-  margin-left: 104px;
-  margin-right: auto;
-  padding: 115px 60px 154px 0;
-  color: #5F6371;
-}
-.questions__title {
-  margin-bottom: 40px;
-  color: #393E51;
-}
-.questions__img {
-  background: url("../assets/icons/questions.svg");
-  width: 100%;
-  height: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.questions__btn {
-  margin-top: 40px;
-  width: 192px;
-  height: 48px;
-  background: #3D518C;
-  border-radius: 10px;
-  color: #F8F5F0;
-}
-.questions__btn:hover {
-  background: #334681;
-}
-
-.recipe-card {
-  width: 250px;
-  height: 352px;
-}
-.recipe-card__text {
-  color: white;
-}
-
-.recipe-card:nth-of-type(1) {
-  background: url("../assets/icons/recipe1.svg") no-repeat center center/cover;
-}
-
-.recipe-card:nth-of-type(2) {
-  background: url("../assets/icons/recipe2.svg") no-repeat center center/cover;
-}
-
-.recipe-card:nth-of-type(3) {
-  background: url("../assets/icons/recipe3.svg") no-repeat center center/cover;
-}
-
-.recipe-card:nth-of-type(4) {
-  background: url("../assets/icons/recipe4.svg") no-repeat center center/cover;
-}
-
-.recipe-card:nth-of-type(5) {
-  background: url("../assets/icons/recipe5.svg") no-repeat center center/cover;
-}
-
-.faq {
-  margin-bottom: 48px;
-  margin-left: 20px;
-  color: #393E51;
-}
-
-.accordion {
-  border: none;
-  color: #393E51;
-}
-
-.accordion-button {
-  color: #393E51;
-}
-.accordion-button:focus {
-  box-shadow: none;
-  outline: none;
-  background-color: inherit;
-}
-
 .footer {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -862,19 +745,6 @@ header {
     margin-left: auto;
     padding-left: 40px;
   }
-  .pop-categories__grid {
-    gap: 20px;
-  }
-  .grid-interesting {
-    grid-template-rows: auto;
-    grid-template-columns: 50% 50%;
-  }
-  .block-grid {
-    grid-area: auto !important;
-  }
-  #grid2 {
-    height: 320px;
-  }
 }
 @media (max-width: 992px) {
   .h1 {
@@ -924,28 +794,13 @@ header {
   .goods-slider {
     margin-bottom: 50px;
   }
-  .pop-categories__grid {
-    gap: 10px;
-  }
   .goods-slider-card {
     width: 150px;
-    height: 316px;
+    height: auto;
     padding: 8px;
   }
   .card {
     max-height: 260px;
-  }
-  .grid-interesting {
-    grid-template-rows: auto;
-    grid-template-columns: 100%;
-  }
-  .questions__text-box {
-    margin-left: auto;
-    padding: 50px 20px;
-  }
-  .questions__img {
-    height: 368px;
-    width: 100%;
   }
   .about__text-box {
     margin-left: auto;

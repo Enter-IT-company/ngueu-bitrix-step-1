@@ -108,43 +108,6 @@ function updateNavigationButtons(swiper) {
         nextButton.classList.remove('arrow-main__disabled');
     }
 }
-
-// -------------- Swiper recipes ---------------
-
-const SWIPER_RESEPIS = new Swiper('.recipes', {
-    slidesPerView: 'auto',
-    spaceBetween: 20,
-    loop: false,
-    navigation: {
-        nextEl: '.arrow-main__right',
-        prevEl: '.arrow-main__left',
-    },
-    on: {
-        init: function () {
-            updateNavigationButtons(this);
-        },
-        slideChange: function () {
-            updateNavigationButtons(this);
-        },
-    },
-});
-
-function updateNavigationButtons(swiper) {
-    const prevButton = document.querySelector('#arrow-left-recipes');
-    const nextButton = document.querySelector('#arrow-right-recipes');
-
-    if (swiper.isBeginning) {
-        prevButton.classList.add('arrow-main__disabled');
-    } else {
-        prevButton.classList.remove('arrow-main__disabled');
-    }
-
-    if (swiper.isEnd) {
-        nextButton.classList.add('arrow-main__disabled');
-    } else {
-        nextButton.classList.remove('arrow-main__disabled');
-    }
-}
 // -------------- Header button katalog img ---------------
 
     const KATALOG_IMG = document.querySelector('.header-bot__fish');
