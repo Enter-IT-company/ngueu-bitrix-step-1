@@ -472,14 +472,14 @@ header {
 // -------------- running line----------------
 
 .marquee {
-    width: auto;
+    width: 100%;
     overflow: hidden;
     white-space: nowrap;
     
 }
 
 .marquee-content {
-    width: auto;
+    width: 100%;
     display: inline-block;
     animation: marquee 15s linear infinite;
 }
@@ -879,10 +879,14 @@ header {
     color: $text-darker;
 }
 
+.con-faq {
+    margin-bottom: 100px;
+}
+
 .accordion-button {
     color: $text-darker;
 
-    &:focus {
+    &:focus, &:active, &:hover, &:not(.collapsed) {
         box-shadow: none;
         outline: none;
         background-color: inherit;
@@ -1041,6 +1045,11 @@ header {
 
     #grid2 {
         height: 320px;
+    }
+
+    
+    .con-faq {
+        margin-bottom: 50px;
     }
 
 }
