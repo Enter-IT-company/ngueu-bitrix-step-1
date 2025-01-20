@@ -1,43 +1,226 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         <title>Гурман Маркет</title>
 
         <!-- FONTS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="assets/fonts/ChampagneLimousines/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com/">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/fonts/ChampagneLimousines/style.css">
 
         <!-- LIB -->
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
         <!-- STYLES FOR SITE -->
-        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <div class="wrapper">
-            <header class="header">
-                <div class="container">Шапка сайта</div>
-            </header>
+        <header>
+            <div class="header__desktop wrapper">
+                <!-- Верхняя часть хедера -->
+                <div class="header__top mobile_hidden flex-sb flex-row">
+                    <div class="top__info"> 
+                        <span class="info__1 flex-sb flex-row">
+                            <img src="img/city.svg" height="24">
+                            <address> Г. Екатеринбург</address> 
+                        </span>
+                        <span class="info__2 flex-sb flex-row"><img src="img/call.svg" height="24">
+                            <a href="tel:+79221813675">+7 (922) 181 36 75
+                                <time style="color: #BDAA8A;">(10:00-23:00)
+                            </time></a>
+                        </span>
+                    </div>
+                    <nav class="nav-menu">
+                        <ul class="nav-menu__top flex-sb flex-row">
+                            <li><a href="#">Оплата и доставка</a></li>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Статьи</a></li>
+                        </ul>
+                    </nav> 
+                </div>
+                <!-- Нижняя часть хедера -->
+                <div class="header__bottom flex-sb flex-row">
+                    <div class="header__bottom1  flex-row">
+                        <div class=" header-catalog mobile_show none">
+                            <div class="left-menu">
+                                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                    <img src="img/menu-line-horizontal.svg" alt="Меню">
+                                </button>
+                                <!-- offcanvas -->
+                                <div class="offcanvas offcanvas-start flex-sb" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                                    <div class="left-menu-top">
+                                        <button class="btn dropdown flex-col pg" type="button" data-bs-dismiss="offcanvas" aria-label="Close"><img src="img/remove.svg" alt="Назад"></button>
+                                        <nav class="dropdown mt-3 collapse show flex-col">
+                                            <button class="btn dropdown-item" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                                            Каталог <img class="up" src="img/Vector 175.svg" alt="">
+                                            </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item op" href="#">Собственное производство</a>
+                                                    <a class="dropdown-item op" href="#">Икра красная</a>
+                                                    <a class="dropdown-item op" href="#">Консервация и деликатесы</a>
+                                                    <a class="dropdown-item op" href="#">Мясо, птица</a>
+                                                    <a class="dropdown-item op" href="#">Рыба</a>
+                                                    <a class="dropdown-item op" href="#">Морепродукты</a>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item" href="#">Оплата и доставка</a>
+                                            <a class="dropdown-item" href="#">О компании</a>
+                                            <a class="dropdown-item" href="#">Контакты</a>
+                                            <a class="dropdown-item" href="#">Статьи</a>
+                                        </nav>
+                                    </div>
+                                    <div class="left-menu-bottom flex-col flex-sb">
+                                        <span>г. Екатеринбург</span>
+                                        <span>Ежедневно с 10:00 до 21:00</span>
+                                        <div>
+                                            <img src="img/telegram.svg">
+                                            <img src="img/VK Logo.svg">
+                                        </div>
+                                        <div class="btn-phone"><a href="tel:+79221813675">+7 (922) 181 36 75</a>
 
-            <main class="main">
-                <div class="container">Страница каталога</div>
-            </main>
+                                        </div>
+                                    </div>
+                                    <!-- /////////////////////// -->
 
-            <footer class="footer">
-                <div class="container">Подвал сайта</div>
-            </footer>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="logo">
+                            <a href="#">
+                                <img src="img/gurman-logo.svg" alt="Гурман маркет">
+                            </a>
+                        </div>
+                        <div class="catalog mobile_hidden">
+                            <a href="#">
+                                <img src="img/Frame 427321903.svg" alt="Логотип">
+                            </a>
+                        </div>
+                        <div class="search mobile_hidden flex-sb flex-row">
+                            <form action="обрабатывает данные, поступающие из формы">
+                                <input class="search__txt " type="text" placeholder="Найти товар"  name="search">
+                                <button class="search__btn" > 
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.5 17.5L22 22L17.5 17.5Z" fill="#BDAA8A"></path>
+                                        <path d="M17.5 17.5L22 22" stroke="#BDAA8A" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z" stroke="#BDAA8A" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                </div>
+                <div class="header__bottom2">
+                    <a class="mobile_show none" href="#"><img src="img/search-02.svg" alt="Поиск"></a>
+                    <img src="img/basket.svg" alt="Корзина">
+                    <img src="img/Favorite.svg" alt="Избранное">
+                </div>
+            </div>
+        </header>
+        
+        <main class="main"> 
+            <div class="container1">Главная страница</div>
+        </main>
+
+        <footer>
+            <div class="footer__menu wrapper flex-sb flex-row" >
+                <div class="footer__logo">
+                    <img class="logo__gurman" src="img/Footer-logo.svg"/>
+                    <a href="#"><p class="font-h6">Paspaботано в <u>LOBUT DIGITAL</u></p></a>
+                </div>
+                <div class="menu__catalog">
+                    <ul class="font-h5"> <p>Каталог</p>
+                    <li class="font-h6"><a href="#">Охлажденная рыба</a></li>
+                    <li class="font-h6"><a href="#">Икра</a></li>
+                    <li class="font-h6"><a href="#">Морепродукты</a></li>
+                    <li class="font-h6"><a href="#">Рыба</a></li>
+                    </ul>
+                </div>
+                <div class="menu__categories">
+                    <ul class="font-h5"> <p>Категории</p>
+                        <li class="font-h6"><a href="#">Морепродукты</a></li>
+                        <li class="font-h6"><a href="#">Собственное производство</a></li>
+                        <li class="font-h6"><a href="#">Мясо, птица</a></li>
+                        <li class="font-h6"><a href="#">Консервация и деликатесы</a></li>
+                        </ul>
+                </div>
+                <div class="menu__info">
+                    <ul class="font-h5"> <p>Информация</p>
+                        <li class="font-h6"><a href="#">Блог</a></li>
+                        <li class="font-h6"><a href="#">Вопросы и ответы</a></li>
+                        <li class="font-h6"><a href="#">Политика конфиденциальности</a></li>
+                        <li class="font-h6"><a href="#">Карта сайта</a></li>
+                        </ul>
+                </div>
+                <div class="menu__contact">
+                    <ul class="font-h5"> <p>Контакты</p>
+                        <li class="font-h6"><a href="#">г. Екатеринбург ул. Шефская д.101</a></li>
+                        <li class="font-h6"><a href="tel:+79221813675">+7 (922) 181 36 75</a></li>
+                        <li class="font-h6"><a href="tel:+79222019520">+7 (922) 201 95 20</a></li>
+                        </ul>
+                </div>
+            </div>
+        </footer>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="leftLabel" aria-labelledby="offcanvasExampleLabel">
+            <div class="left-menu-top d-flex flex-col flex-sb">
+                <div class="left-menu-top__main d-flex flex-col flex-sb">
+                    <div class="left-menu-top__header">
+                        <button type="button" data-bs-dismiss="offcanvas" aria-label="Close"> <img src="assets/icons/remove.svg" alt="remove"></button>
+                    </div>
+                    <ul class="menu-left">
+                        <li class="mob-top-menu__li">
+                            <button class="left-menu-top__main__btn" type="button" data-bs-toggle="collapse" data-bs-target="#katalog" aria-controls="offcanvasExample">Каталог<img class="dir-up" src="assets/icons/direction-up.svg" alt="">
+                            </button>
+                            <nav class="collapse left-menu-top__list color-lighter m5" id="katalog">
+                                <ul>
+                                    <li class="list-li"><a class="color-lighter" href="#">Собственное производство</a></li>
+                                    <li class="list-li"><a class="color-lighter" href="#">Икра красная</a></li>
+                                    <li class="list-li"><a class="color-lighter" href="#">Консервация и деликатесы</a></li>
+                                    <li class="list-li"><a class="color-lighter" href="#">Мясо, птица</a></li>
+                                    <li class="list-li"><a class="color-lighter" href="#">Рыба</a></li>
+                                    <li class="list-li"><a class="color-lighter" href="#">Морепродукты</a></li>
+                                </ul>
+                            </nav>
+                        </li>
+                        <li class="mob-top-menu__li"><a href="#">Оплата и доставка</a></li>
+                        <li class="mob-top-menu__li "><a href="#">О компании</a></li>
+                        <li class="mob-top-menu__li"><a href="#">Контакты</a></li>
+                        <li class="mob-top-menu__li"><a href="#">Статьи</a></li>
+                    </ul>
+                </div>
+                <div class="mob-bot d-flex flex-col m5">
+                    <div class="mob-bot_loc d-flex flex-col m5"><span>г. Екатеринбург</span><time datetime="Mo-Su,10:00-21:00">Ежедневно с 10:00 до 21:00</time></div>
+                    <div class="messengers d-flex flex-row">
+                        <a class="d-block" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg class="icons-gold" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.5248 4.05879C20.1482 3.74394 19.6307 3.66292 19.1771 3.8478L3.81963 10.099C3.14407 10.3793 2.82185 11.1587 3.09991 11.8398C3.24373 12.1921 3.53 12.4654 3.88659 12.5911L7.19966 13.7524L8.99515 19.7377C8.99876 19.7499 9.00985 19.7573 9.01451 19.7691C9.03308 19.8168 9.06023 19.8607 9.0945 19.8986C9.10727 19.9138 9.12118 19.9281 9.13604 19.9413C9.18077 19.9788 9.23272 20.0065 9.28859 20.0226C9.29712 20.0251 9.30282 20.0328 9.31151 20.0348L9.31653 20.0346L9.31904 20.0356C9.34766 20.0421 9.37685 20.0452 9.4061 20.0449C9.44434 20.0435 9.48227 20.0369 9.51868 20.0251C9.52574 20.0232 9.53286 20.0237 9.53976 20.0214C9.60197 19.9993 9.65816 19.963 9.70393 19.9152C9.70927 19.9098 9.71738 19.9088 9.7225 19.9031L12.3057 17.0295L16.0741 19.9715C16.3031 20.152 16.5854 20.2501 16.876 20.25C17.5046 20.2499 18.0473 19.8059 18.1768 19.1858L20.9734 5.34328C21.0703 4.86445 20.8979 4.37073 20.5248 4.05879ZM9.93266 14.8875L9.32647 17.8576L8.0623 13.6422L14.3322 10.3504L10.049 14.6689C9.98979 14.7287 9.94935 14.8047 9.93266 14.8875ZM17.3373 19.0119C17.3044 19.171 17.1918 19.3015 17.0401 19.3563C16.8919 19.4137 16.7244 19.3881 16.5998 19.2887L12.5167 16.1011C12.3399 15.9631 12.0876 15.9856 11.9374 16.1526L10.1411 18.1508L10.7463 15.1888L16.9079 8.97565C17.0753 8.80712 17.0756 8.53368 16.9084 8.36489C16.7762 8.23129 16.5733 8.19974 16.4073 8.28699L7.52439 12.9508L4.167 11.7742C3.984 11.7135 3.85954 11.5422 3.85729 11.348C3.84845 11.1524 3.96329 10.9726 4.14357 10.8999L19.4986 4.64955C19.659 4.58093 19.844 4.60968 19.9765 4.72382C20.1084 4.83111 20.1689 5.00417 20.133 5.17112L17.3373 19.0119Z"/>
+                            </svg>
+                        </a>
+                        <a class="d-block" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg class="icons-gold" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.5 6.5H4.5C4.5 6.5 6.81 12.5 9 12.5C9.41 12.5 9.5 11.75 9.5 9.5C9.5 7.25 8.91 6.5 8.5 6.5C8.5 6.09 9.28 5.5 11.5 5.5C13.72 5.5 13.5 5.56 13.5 6.5V10.5C13.5 11.66 13.88 12.5 14.5 12.5C15.12 12.5 18.72 8.06 19 6.5H23.5C23.5 7.03 19.5 12.56 19.5 13C19.5 13.44 23.5 17.5 23.5 18C23.5 18.5 22.63 18.5 21.5 18.5H19C18.41 18.5 15.84 15.5 14.5 15.5C13.16 15.5 14.22 18.5 13 18.5H11C7.28 18.5 1 9.41 0.5 6.5Z" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <a href="tel:+79221813675" class="btn-phone font-btn d-flex align-items-center justify-content-center">+7 (922) 181 36 75</a>
+                </div>
+            </div>
         </div>
 
         <!-- LIB -->
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/swiper-bundle.min.js"></script>
+        
+        
+
 
         <!-- SCRIPT FOR SITE -->
         <script src="js/scripts.js"></script>
+
+
     </body>
 </html>

@@ -1,9 +1,284 @@
 /* 
 === fonts === 
 font-family: "Raleway", sans-serif;
-font-family: "Champagne & Limousines", sans-serif;
-*/
+ */
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+.flex-sb {
+    justify-content: space-between;
+}
+
+address {
+    font-style: normal;
+}
 
 :root {
     --bs-body-font-family: "Raleway", sans-serif;
+    --max-width: 1280px;
+    --max-width-margin: calc((100vw - 1280px) / 2);
+    
+}
+
+
+ul {
+    list-style: none;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+   
+}
+
+header {
+    padding-top: 8px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000; 
+    height: 120px;
+    font-size: 14px;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 36px;
+}
+.wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px;
+    max-width: 1280px;
+}
+.banner {
+    width: 1280px;
+    background-color: white;
+}
+
+.nav-menu__top {
+    justify-content: end;
+    gap: 24px;
+}
+
+
+.top__info {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.info__1 {
+    gap: 11px;
+}
+
+.info__2 {
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+    height: 24px;
+}
+
+
+.header__bottom1 {
+    gap: 32px;
+    width: 990px;
+    height: 48px;
+}
+
+.header__bottom2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+}
+
+.logo {
+    max-width: 100%;
+}
+
+.catalog {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 175px;
+    height: 48px;
+    background-color: #3D518C;
+    border-radius: 10px;
+    
+}
+
+.search {
+    justify-content: center;
+    align-items: center; 
+    border: 1px solid #EEE4D3;
+    border-radius: 10px;
+    font-family: inherit;
+    outline: none;
+    max-width: 648px;
+    width: 100%;
+    height: 48px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding: 0 16px;
+    
+  }
+
+.search__txt {
+    align-items: center;
+    border: none;
+    outline: none;
+    width: 568px;
+    height: 22px;
+    
+}
+.search__btn {
+    position:relative;
+    border: none;
+    height: 24px;
+    width:  24px;
+    background-color: white;
+}
+
+input::placeholder {
+    color: #EEE4D3;
+}
+
+/* Заполнить пространство */
+main {
+    padding-top: 120px;
+    height: 2000px;
+    z-index: 1;
+}
+
+footer {
+    position:relative;
+    left: 0;
+    bottom: 0;
+    padding-bottom: 46px;
+    background-color: #3D518C;
+    width: 100%;
+    height: 211px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: white;
+    
+}
+
+.font-h5 {
+    font-size: 16px;
+    padding: 0%;
+}
+
+.none {
+    display: none;
+}
+
+.font-h6 {
+    font-size: 14px;
+    padding: 0%;
+}
+
+.logo__gurman {
+    padding-bottom: 40px;
+}
+.footer__menu {
+    
+    height: 131px;
+    margin-bottom: 20px;
+    padding: 0%;
+    min-width: 100%;
+    max-width: 100%;
+    
+}
+
+@media (max-width: 992px) {
+.mobile_hidden {
+    display: none;
+}
+
+.mobile_show {
+    display: flex;
+    align-items: center;
+}
+}
+@media (max-width: 550px) {
+    .footer__menu {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        text-align: center;
+    }
+}     
+            
+
+.offcanvas {
+    --bs-offcanvas-width: 280px;
+    padding: 20px;
+}
+
+.up {
+    transform: rotate(180deg);
+}   
+
+.btn {
+    align-items: flex-start;
+    border: 0px;
+    padding: 0px;
+}
+
+.dropdown-menu {
+    border: 0px;
+    font-size: 14px;
+    width: 260px;
+}
+
+.op {
+ opacity: 50%;   
+}
+.dropdown-item {
+   padding-bottom: 20px;
+   
+}
+.btn-phone {
+    
+    height: 38px;
+    width: 230px;
+    color: white;
+    border-radius: 10px;
+    padding: 8px;
+    text-align: center;
+    background: #BDAA8A;
+    justify-self: center;
+  }
+
+  .left-menu {
+    justify-content: ;
+  }
+.left-menu-bottom {
+    justify-content: end;
+    gap: 10px;
 }
